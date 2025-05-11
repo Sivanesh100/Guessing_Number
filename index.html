@@ -1,0 +1,41 @@
+<html>
+<head>
+    <title>sample</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="wrapper">
+        <h2>Guessing Number</h2>
+        <div class="inputdiv">
+              <input type="number" id="input" placeholder="Enter guessing number">
+        </div>
+        <div>
+            <button type="submit" onclick="check()">check</button>
+        </div>
+        <div id="result">
+             
+        </div>
+    </div>
+    <script>
+          const num=Math.floor(Math.random() * 100) + 1
+        function check(){
+              let guess=Number(document.getElementById("input").value);
+              let result=document.getElementById("result");
+              if(guess<num)
+              {
+                result.innerHTML="It is low";
+              }
+              else if(guess>num)
+              {
+                result.innerHTML="It is high";
+              }
+              else
+              {
+                result.innerHTML="Your guessed number is correct";
+              }
+
+        }  
+
+    </script>
+</body>
+</html>
